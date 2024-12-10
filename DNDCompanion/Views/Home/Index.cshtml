@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="jumbotron text-center">
+    <h1 class="display-4">Welcome to DnD the Companion!</h1>
+    <p class="lead">Your ultimate tool for managing characters, campaigns, and dice rolls.</p>
+    <hr class="my-4" />
+    <p>Get started by creating a character or exploring your campaigns.</p>
+    <a class="btn btn-primary btn-lg" href="/Character/Create" role="button">Create Character</a>
+    <a class="btn btn-secondary btn-lg" href="/Campaign" role="button">View Campaigns</a>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Manage Characters</h3>
+            <p>Track your DnD characters, update their stats, and keep notes on their adventures.</p>
+            <a href="/Character" class="btn btn-outline-primary">Go to Characters</a>
+        </div>
+        <div class="col-md-4">
+            <h3>Campaign Logs</h3>
+            <p>Organize your campaigns, manage player progress, and keep track of storylines.</p>
+            <a href="/Campaign" class="btn btn-outline-primary">Go to Campaigns</a>
+        </div>
+        <div class="col-md-4">
+            <h3>Dice Roller</h3>
+            <p>Need to roll a dice quickly? Use our built-in dice roller for all your random number needs.</p>
+            <a href="/Dice" class="btn btn-outline-primary">Use Dice Roller</a>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center mt-5">
+    <p>&copy; 2024 DnD Companion. All Rights Reserved.</p>
+</footer>

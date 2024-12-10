@@ -1,0 +1,17 @@
+﻿<h2>Dice Roller</h2>
+<form id="diceForm">
+    <label for="sides">Number of Sides:</label>
+    <input type="number" id="sides" value="20" />
+    <button type="submit">Roll</button>
+</form>
+<p>Result: <span id="result"></span></p>
+
+<script>
+    document.getElementById('diceForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const sides = document.getElementById('sides').value;
+        fetch(`/Dice/Roll?sides=${sides}`)
+            .then(response => response.json())
+            .then(data => document.getElementById('result').textContent = data.result);
+    });
+</script>
