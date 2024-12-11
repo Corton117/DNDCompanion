@@ -14,11 +14,33 @@ namespace DNDCompanion.Controllers
             _logger = logger;
         }
 
+        public IActionResult Index() 
+        { 
+            return View(); 
+        }
+
         public IActionResult Privacy()
         {
             return View();
         }
 
+        [Authorize]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        public IActionResult SetSession()
+        {
+            HttpContext.Session.SetString("SessionKeyName", "SessionValue");
+            return View();
+        }
+        
+        public IActionResult GetSession()
+        {
+            var value = HttpContext.Session.GetString("SessionKeyName");
+            return View("ViewName", value);
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
