@@ -2,8 +2,11 @@
 
 namespace DNDCompanion.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class DiceController : Controller
     {
+        [HttpGet("roll/{sides}")]
         public IActionResult Roll(int sides = 20)
         {
             var random = new Random();
